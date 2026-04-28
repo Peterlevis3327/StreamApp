@@ -3,8 +3,33 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-def reactNativeDir = file('../../node_modules/react-native')
-def cliAndroidDir = file('../../node_modules/@react-native-community/cli-platform-android')
+// locate react-native and CLI gradle scripts from a few likely locations
+def locateDir = { List candidates ->
+    for (c in candidates) {
+        if (c != null && c.exists()) {
+            return c
+        }
+    }
+    return null
+}
+
+def reactCandidates = [
+        file('../../node_modules/react-native'),
+        file('../node_modules/react-native'),
+        file('../../../node_modules/react-native'),
+        file('../../../../node_modules/react-native'),
+        rootProject.file('node_modules/react-native'),
+        rootProject.file('../node_modules/react-native')
+]
+
+def cliCandidates = [
+        file('../../node_modules/@react-native-community/cli-platform-android'),
+        file('../node_modules/@react-native-community/cli-platform-android'),
+        rootProject.file('node_modules/@react-native-community/cli-platform-android'),
+]
+
+def reactNativeDir = locateDir(reactCandidates)
+def cliAndroidDir = locateDir(cliCandidates)
 
 project.ext.react = [
         entryFile     : file('../../index.js'),
@@ -13,12 +38,18 @@ project.ext.react = [
         bundleInRelease: true
 ]
 
-if (reactNativeDir.exists()) {
-    apply from: file('../../node_modules/react-native/react.gradle')
+if (reactNativeDir != null) {
+    def reactGradle = file("${reactNativeDir}/react.gradle")
+    if (reactGradle.exists()) {
+        apply from: reactGradle
+    }
 }
 
-if (cliAndroidDir.exists()) {
-    apply from: file('../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle')
+if (cliAndroidDir != null) {
+    def cliGradle = file("${cliAndroidDir}/native_modules.gradle")
+    if (cliGradle.exists()) {
+        apply from: cliGradle
+    }
 }
 
 def enableProguardInReleaseBuilds = false
@@ -27,7 +58,13 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     namespace 'com.streamapp.mobile'
-    compileSdk rootProject.ext.compileSdkVersion
+    def _compileSdk = 34
+    try {
+        if (rootProject != null && rootProject.ext != null && rootProject.ext.compileSdkVersion != null) {
+            _compileSdk = rootProject.ext.compileSdkVersion
+        }
+    } catch (ignored) {}
+    compileSdk _compileSdk
 
     defaultConfig {
         applicationId 'com.streamapp.mobile'
