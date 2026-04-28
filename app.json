@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "StreamApp",
+    "slug": "stream",
+    "scheme": "streamapp",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.streamapp.mobile",
+      "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e0cc1b7-9c51-42f1-ae29-0daa2f225253"
+      }
+    }
+  }
+}
