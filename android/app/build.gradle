@@ -1,55 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.facebook.react'
 }
 
-// locate react-native and CLI gradle scripts from a few likely locations
-def locateDir = { List candidates ->
-    for (c in candidates) {
-        if (c != null && c.exists()) {
-            return c
-        }
-    }
-    return null
-}
-
-def reactCandidates = [
-        file('../../node_modules/react-native'),
-        file('../node_modules/react-native'),
-        file('../../../node_modules/react-native'),
-        file('../../../../node_modules/react-native'),
-        rootProject.file('node_modules/react-native'),
-        rootProject.file('../node_modules/react-native')
-]
-
-def cliCandidates = [
-        file('../../node_modules/@react-native-community/cli-platform-android'),
-        file('../node_modules/@react-native-community/cli-platform-android'),
-        rootProject.file('node_modules/@react-native-community/cli-platform-android'),
-]
-
-def reactNativeDir = locateDir(reactCandidates)
-def cliAndroidDir = locateDir(cliCandidates)
-
-project.ext.react = [
-        entryFile     : file('../../index.js'),
-        enableHermes   : true,
-        bundleInDebug  : false,
-        bundleInRelease: true
-]
-
-if (reactNativeDir != null) {
-    def reactGradle = file("${reactNativeDir}/react.gradle")
-    if (reactGradle.exists()) {
-        apply from: reactGradle
-    }
-}
-
-if (cliAndroidDir != null) {
-    def cliGradle = file("${cliAndroidDir}/native_modules.gradle")
-    if (cliGradle.exists()) {
-        apply from: cliGradle
-    }
+react {
+    entryFile = file('../../index.js')
+    autolinkLibrariesWithApp()
 }
 
 def enableProguardInReleaseBuilds = false
@@ -117,10 +74,17 @@ android {
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-android'
+    def reactNativeVersion = '0.76.0'
+    try {
+        if (rootProject != null && rootProject.ext != null && rootProject.ext.reactNativeVersion != null) {
+            reactNativeVersion = rootProject.ext.reactNativeVersion
+        }
+    } catch (ignored) {}
+
+    implementation "com.facebook.react:react-android:${reactNativeVersion}"
 
     if (hermesEnabled) {
-        implementation 'com.facebook.react:hermes-android'
+        implementation "com.facebook.react:hermes-android:${reactNativeVersion}"
     } else {
         implementation jscFlavor
     }
