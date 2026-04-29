@@ -15,7 +15,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     namespace 'com.streamapp.mobile'
-    def _compileSdk = 34
+    def _compileSdk = 35
     try {
         if (rootProject != null && rootProject.ext != null && rootProject.ext.compileSdkVersion != null) {
             _compileSdk = rootProject.ext.compileSdkVersion

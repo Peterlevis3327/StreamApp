@@ -1,6 +1,6 @@
-import channels from './generated/channels.json'
-import manifest from './generated/manifest.json'
 import type {PlaylistManifestItem, StreamChannel} from '../types'
+
+declare const require: (path: string) => unknown
 
 export interface ChannelDataset {
   channels: StreamChannel[]
@@ -8,9 +8,12 @@ export interface ChannelDataset {
 }
 
 export function loadChannels(): ChannelDataset {
+  const channels = require('./generated/channels.json') as StreamChannel[]
+  const manifest = require('./generated/manifest.json') as PlaylistManifestItem[]
+
   return {
-    channels: channels as StreamChannel[],
-    manifest: manifest as PlaylistManifestItem[]
+    channels,
+    manifest
   }
 }
 

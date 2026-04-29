@@ -29,12 +29,9 @@ function App(): React.JSX.Element {
   const [recents, setRecents] = React.useState<Set<string>>(new Set())
   const [country, setCountry] = React.useState<string | undefined>()
   const [provider, setProvider] = React.useState<string | undefined>()
-
-  const dataset = React.useMemo(() => loadChannels(), [])
-  const channels = React.useMemo(
-    () => sortChannelsForFastDiscovery(dataset.channels),
-    [dataset.channels]
-  )
+  const [channels, setChannels] = React.useState<StreamChannel[]>([])
+  const [loadingChannels, setLoadingChannels] = React.useState(true)
+  const [loadError, setLoadError] = React.useState<string | undefined>()
 
   const sportsCount = React.useMemo(
     () => channels.filter((item: StreamChannel) => item.isSports).length,
@@ -42,6 +39,28 @@ function App(): React.JSX.Element {
   )
 
   React.useEffect(() => {
+    let mounted = true
+
+    const loadTimer = setTimeout(() => {
+      try {
+        const dataset = loadChannels()
+        const sorted = sortChannelsForFastDiscovery(dataset.channels)
+
+        if (mounted) {
+          setChannels(sorted)
+          setLoadError(undefined)
+        }
+      } catch (error) {
+        if (mounted) {
+          setLoadError(error instanceof Error ? error.message : 'Unable to load channels.')
+        }
+      } finally {
+        if (mounted) {
+          setLoadingChannels(false)
+        }
+      }
+    }, 0)
+
     const bootstrap = async () => {
       const [favoriteIds, recentIds] = await Promise.all([readFavorites(), readRecents()])
       setFavorites(new Set(favoriteIds))
@@ -52,6 +71,11 @@ function App(): React.JSX.Element {
       setFavorites(new Set())
       setRecents(new Set())
     })
+
+    return () => {
+      mounted = false
+      clearTimeout(loadTimer)
+    }
   }, [])
 
   const countries = React.useMemo(
@@ -202,9 +226,14 @@ function App(): React.JSX.Element {
         )}
         ListEmptyComponent={
           <View style={[styles.empty, {backgroundColor: colors.card, borderColor: colors.border}]}> 
-            <Text style={[styles.emptyTitle, {color: colors.textPrimary}]}>No channels found</Text>
+            <Text style={[styles.emptyTitle, {color: colors.textPrimary}]}>
+              {loadingChannels ? 'Loading channels' : loadError ? 'Could not load channels' : 'No channels found'}
+            </Text>
             <Text style={[styles.emptyText, {color: colors.textSecondary}]}>
-              Run generate:playlists first, then adjust search or filters.
+              {loadError ??
+                (loadingChannels
+                  ? 'Preparing the playlist library...'
+                  : 'Run generate:playlists first, then adjust search or filters.')}
             </Text>
           </View>
         }

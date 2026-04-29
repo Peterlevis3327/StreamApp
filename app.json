@@ -7,11 +7,20 @@
     "orientation": "portrait",
     "android": {
       "package": "com.streamapp.mobile",
-      "versionCode": 1
+      "versionCode": 1,
+      "runtimeVersion": "1.0.0"
     },
     "extra": {
       "eas": {
         "projectId": "5e0cc1b7-9c51-42f1-ae29-0daa2f225253"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/5e0cc1b7-9c51-42f1-ae29-0daa2f225253"
+    },
+    "ios": {
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     }
   }
