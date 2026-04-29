@@ -5,7 +5,7 @@ module.exports = {
     }
   },
   dependencies: {
-    // Expo is used for EAS/app config only; this RN 0.76 app does not use Expo native modules.
+    // Keep Expo disabled for native autolinking; EAS Update uses app config/manifest values.
     expo: {
       platforms: {
         android: null,

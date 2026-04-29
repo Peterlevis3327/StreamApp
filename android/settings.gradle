@@ -7,7 +7,11 @@ plugins {
 }
 
 reactSettings {
-    autolinkLibrariesFromCommand()
+    def cliPath = new File(settingsDir, "../node_modules/@react-native-community/cli/build/bin.js")
+    def autolinkCommand = cliPath.exists()
+        ? ["node", cliPath.absolutePath, "config"]
+        : ["npx", "@react-native-community/cli", "config"]
+    autolinkLibrariesFromCommand(autolinkCommand, new File(settingsDir, ".."))
 }
 
 dependencyResolutionManagement {
