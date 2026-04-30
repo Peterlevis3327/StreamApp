@@ -15,7 +15,7 @@ reactSettings {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
@@ -24,3 +24,17 @@ dependencyResolutionManagement {
 
 rootProject.name = 'StreamApp'
 include(':app')
+
+def ensureAndroidProjectDir = { String projectPath, String relativeDir ->
+    def projectRef = findProject(projectPath)
+    if (projectRef == null) {
+        include(projectPath)
+        projectRef = findProject(projectPath)
+    }
+    projectRef.projectDir = new File(settingsDir, relativeDir)
+}
+
+// Ensure common RN libraries resolve to their Android build files in CI.
+ensureAndroidProjectDir(':react-native-video', '../node_modules/react-native-video/android')
+ensureAndroidProjectDir(':react-native-async-storage_async-storage', '../node_modules/@react-native-async-storage/async-storage/android')
+ensureAndroidProjectDir(':react-native-safe-area-context', '../node_modules/react-native-safe-area-context/android')

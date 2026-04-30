@@ -1,0 +1,180 @@
+Starting a Gradle Daemon, 3 busy Daemons could not be reused, use --status for details
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :app
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven2' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by plugin 'com.facebook.react'
+Build was configured to prefer settings repositories over project repositories but repository 'maven3' was added by plugin 'com.facebook.react'
+
+> Configure project :
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenLocal' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven4' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven5' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google2' was added by build file 'build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo2' was added by build file 'build.gradle'
+
+> Configure project :react-native-async-storage_async-storage
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file '..\node_modules\@react-native-async-storage\async-storage\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'Google3' was added by build file '..\node_modules\@react-native-async-storage\async-storage\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo3' was added by build file '..\node_modules\@react-native-async-storage\async-storage\android\build.gradle'
+
+> Configure project :react-native-safe-area-context
+Build was configured to prefer settings repositories over project repositories but repository 'Google3' was added by build file '..\node_modules\react-native-safe-area-context\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file '..\node_modules\react-native-safe-area-context\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo3' was added by build file '..\node_modules\react-native-safe-area-context\android\build.gradle'
+
+> Configure project :react-native-video
+Kotlin version is correct: 1.9.24
+AndroidX version is correct: 1.9.3
+useExoplayerIMA: false
+useExoplayerSmoothStreaming: true
+useExoplayerDash: true
+useExoplayerHls: true
+useExoplayerRtsp: false
+buildFromSource: false
+Build was configured to prefer settings repositories over project repositories but repository 'Google3' was added by build file '..\node_modules\react-native-video\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'maven6' was added by build file '..\node_modules\react-native-video\android\build.gradle'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo3' was added by build file '..\node_modules\react-native-video\android\build.gradle'
+
+> Task :react-native-video:tasks
+
+------------------------------------------------------------
+Tasks runnable from project ':react-native-video'
+------------------------------------------------------------
+
+Android tasks
+-------------
+androidDependencies - Displays the Android dependencies of the project.
+signingReport - Displays the signing info for the base and test modules
+sourceSets - Prints out all the source sets defined in this project.
+
+Build tasks
+-----------
+assemble - Assemble main outputs for all the variants.
+assembleAndroidTest - Assembles all the Test applications.
+assembleUnitTest - Assembles all the unit test applications.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+buildNeeded - Assembles and tests this project and all projects it depends on.
+clean - Deletes the build directory.
+compileDebugAndroidTestSources
+compileDebugSources
+compileDebugUnitTestSources
+compileReleaseSources
+compileReleaseUnitTestSources
+debugSourcesJar - Assembles a jar archive containing the sources of target 'debug'.
+extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+releaseSourcesJar - Assembles a jar archive containing the sources of target 'release'.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in project ':react-native-video'.
+dependencies - Displays all dependencies declared in project ':react-native-video'.
+dependencyInsight - Displays the insight into a specific dependency in project ':react-native-video'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of project ':react-native-video'.
+projects - Displays the sub-projects of project ':react-native-video'.
+properties - Displays the properties of project ':react-native-video'.
+resolvableConfigurations - Displays the configurations that can be resolved in project ':react-native-video'.
+tasks - Displays the tasks runnable from project ':react-native-video'.
+
+Install tasks
+-------------
+installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+uninstallAll - Uninstall all applications.
+uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+
+Verification tasks
+------------------
+check - Runs all checks.
+checkJetifier - Checks whether Jetifier is needed for the current project
+checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+connectedCheck - Runs all device checks on currently connected devices.
+connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+deviceCheck - Runs all device checks using Device Providers and Test Servers.
+lint - Runs lint on the default variant.
+lintDebug - Print text output from the corresponding lint report task
+lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+lintRelease - Print text output from the corresponding lint report task
+test - Run unit tests for all variants.
+testDebugUnitTest - Run unit tests for the debug build.
+testReleaseUnitTest - Run unit tests for the release build.
+updateLintBaseline - Updates the lint baseline using the default variant.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+To see all tasks and more detail, run gradlew tasks --all
+
+To see more detail about a task, run gradlew help --task <task>
+
+BUILD SUCCESSFUL in 5m 29s
+14 actionable tasks: 4 executed, 10 up-to-date
